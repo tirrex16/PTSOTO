@@ -1,0 +1,70 @@
+import React from 'react';
+
+const Intro: React.FC = () => {
+  return (
+    <section id="about" className="bg-white py-10 md:py-16 px-6">
+      <div className="max-w-7xl mx-auto">
+
+        {/* Header */}
+        <div className="md:flex justify-between items-end mb-16 md:mb-24">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#2A335D] tracking-tight mb-6 md:mb-0">
+            Get to Know Us Better
+          </h2>
+          <p className="text-gray-500 max-w-sm text-lg font-medium leading-relaxed">
+            Explore our mission, vision, and the values that shape our approach to delivering exceptional results.
+          </p>
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+          {/* Left Column: Floating Blue Card & Small Image */}
+          <div className="lg:col-span-5 flex flex-col gap-10 relative z-10">
+            {/* Blue Feature Card */}
+            <div className="bg-[#2A335D] rounded-[2.5rem] p-10 md:p-14 text-white shadow-2xl">
+              <h3 className="text-3xl font-bold mb-4">Capturing Excellence</h3>
+              <p className="text-blue-100/90 text-sm leading-relaxed mb-8">
+                Discover our journey, values, and the passion that drives us to create exceptional energy distribution experiences across the archipelago.
+              </p>
+              <div className="w-16 h-1 bg-[#00C9A7] rounded-full"></div>
+            </div>
+
+            {/* Small Image (Container Ship) */}
+            <img
+              src="https://images.unsplash.com/photo-1559297434-fae8a1916a79?q=80&w=800&auto=format&fit=crop"
+              alt="Maritime Logistics"
+              className="rounded-[2.5rem] w-full h-80 object-cover shadow-lg"
+            />
+          </div>
+
+          {/* Right Column: Large Masonry Images */}
+          <div className="lg:col-span-7 grid grid-cols-2 gap-8 pt-0 md:pt-12">
+            <img
+              src="https://images.jacobinmag.com/wp-content/uploads/2025/08/28133444/GettyImages-2231494643.jpg"
+              alt="Corporate Office"
+              className="rounded-[2.5rem] w-full h-80 object-cover shadow-md"
+            />
+            {/* Fixed Broken Image URL */}
+            <img
+              src="https://beritatrans.com/images/content/1/2021/2021-10-20/002d3a91d02b91a5a290c44f2b6433c2.jpg"
+              alt="Industrial Operations"
+              className="rounded-[2.5rem] w-full h-80 object-cover shadow-md"
+            />
+            {/* Wide bottom image */}
+            <div className="col-span-2">
+              <img
+                src="https://sinay.ai/wp-content/uploads/2024/06/maritime-education-scaled.jpg"
+                alt="Welding / Construction"
+                className="rounded-[2.5rem] w-full h-64 object-cover shadow-md"
+              />
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default Intro;
