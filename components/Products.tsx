@@ -14,21 +14,21 @@ const Products: React.FC = () => {
       category: "Bunker Supply",
       image: "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?q=80&w=600&auto=format&fit=crop"
     },
-    {
-      title: "Lubricants",
-      category: "Engine Protection",
-      image: "https://images.unsplash.com/photo-1516937941344-00b4ec282de7?q=80&w=600&auto=format&fit=crop"
-    },
-    {
-      title: "Fresh Water Supply",
-      category: "Vessel Logicstics",
-      image: "https://images.unsplash.com/photo-1562093756-3b957635c48b?q=80&w=600&auto=format&fit=crop"
-    },
-    {
-      title: "Bunker Service",
-      category: "Distribution",
-      image: "https://images.unsplash.com/photo-1605218427306-6354db69e568?q=80&w=600&auto=format&fit=crop"
-    }
+    // {
+    //   title: "Lubricants",
+    //   category: "Engine Protection",
+    //   image: "https://images.unsplash.com/photo-1516937941344-00b4ec282de7?q=80&w=600&auto=format&fit=crop"
+    // },
+    // {
+    //   title: "Fresh Water Supply",
+    //   category: "Vessel Logicstics",
+    //   image: "https://images.unsplash.com/photo-1562093756-3b957635c48b?q=80&w=600&auto=format&fit=crop"
+    // },
+    // {
+    //   title: "Bunker Service",
+    //   category: "Distribution",
+    //   image: "https://images.unsplash.com/photo-1605218427306-6354db69e568?q=80&w=600&auto=format&fit=crop"
+    // }
   ];
 
   return (
@@ -36,27 +36,13 @@ const Products: React.FC = () => {
       <div className="max-w-7xl mx-auto">
 
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
-
-          {/* Left Side: Tag & Headline */}
-          <div className="max-w-xl">
-            {/* <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-gray-200 mb-8 shadow-sm">
-              <i className="fa-solid fa-layer-group text-gray-500 text-xs"></i>
-              <span className="text-xs font-semibold text-gray-600 uppercase tracking-wide">Our Services</span>
-            </div> */}
-
-            <h2 className="text-5xl md:text-6xl text-[#222222] font-serif leading-tight">
-              What we can do <br />
-            </h2>
-          </div>
-
-          {/* Right Side: Description & CTA */}
-          <div className="max-w-md flex flex-col items-start gap-8">
-            <p className="text-gray-600 text-lg leading-relaxed">
-              From premium fuel supply to comprehensive maritime logistics, we provide quality energy solutions tailored to your operational needs.
-            </p>
-
-          </div>
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-8">
+          <h2 className="text-5xl md:text-7xl font-bold text-[#2A335D] leading-tight tracking-tight max-w-3xl">
+            Our Products.
+          </h2>
+          <p className="text-gray-500 max-w-md text-lg leading-relaxed font-medium mb-2">
+            From premium fuel supply to comprehensive maritime logistics, we provide quality energy solutions tailored to your operational needs.
+          </p>
         </div>
 
         {/* Services Grid / Scroll */}

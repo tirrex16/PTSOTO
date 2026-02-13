@@ -12,7 +12,8 @@ const Hero: React.FC = () => {
             {/* <span className="block w-24 h-2 bg-[#00C9A7] mt-6 rounded-full"></span> */}
           </h1>
           <p className="text-gray-500 max-w-md text-lg leading-relaxed font-medium mb-2">
-            (Ini nanti bebas mas mau apa Layout textnya) Learn about our unwavering commitment to quality, innovation, and the principles that guide our work every day in the energy sector.
+            Dedicated to providing reliable and efficient industrial and maritime energy solutions, we have quickly positioned ourselves as a trusted partner in the distribution of
+            industrial diesel fuel.
           </p>
         </div>
 
@@ -27,8 +28,8 @@ const Hero: React.FC = () => {
 
           {/* Overlay Text */}
           <div className="absolute top-12 left-12 max-w-xs">
-            <h3 className="text-[white] font-bold text-xl mb-2">Bismillah</h3>
-            <p className="text-gray-500 text-sm">Headshot</p>
+            <h3 className="text-[white] font-bold text-xl mb-2">PT Soto Energi Shakti</h3>
+            {/* <p className="text-gray-500 text-sm">Headshot</p> */}
           </div>
         </div>
 
@@ -37,23 +38,23 @@ const Hero: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-gray-100">
 
             <div className="px-4 flex items-center justify-center md:justify-start gap-4">
-              <span className="text-5xl md:text-6xl font-bold text-[#2A335D]">200+</span>
+              <span className="text-5xl md:text-6xl font-bold text-[#2A335D]">100+</span>
               <div className="text-gray-500 text-sm font-medium leading-tight">
-                Ports <br /> Serviced
+                Areas <br /> Serviced
+              </div>
+            </div>
+
+            <div className="px-4 flex items-center justify-center md:justify-start gap-4 md:-ml-12">
+              <span className="text-5xl md:text-6xl font-bold text-[#2A335D]">1.000.000+</span>
+              <div className="text-gray-500 text-sm font-medium leading-tight">
+                Liters <br /> Supplied
               </div>
             </div>
 
             <div className="px-4 flex items-center justify-center md:justify-start gap-4">
-              <span className="text-5xl md:text-6xl font-bold text-[#2A335D]">150+</span>
+              <span className="text-5xl md:text-6xl font-bold text-[#2A335D]">100%</span>
               <div className="text-gray-500 text-sm font-medium leading-tight">
-                Satisfied <br /> Partners
-              </div>
-            </div>
-
-            <div className="px-4 flex items-center justify-center md:justify-start gap-4">
-              <span className="text-5xl md:text-6xl font-bold text-[#2A335D]">50+</span>
-              <div className="text-gray-500 text-sm font-medium leading-tight">
-                Industry <br /> Awards
+                Satisfaction <br /> Guarantee
               </div>
             </div>
 

@@ -28,17 +28,21 @@ const MissionVision: React.FC = () => {
 
         {/* Quote */}
         <div className="max-w-3xl mx-auto mb-12 min-h-[100px] flex items-center justify-center relative z-40">
-          <p className="text-white text-lg md:text-xl font-light leading-relaxed text-center italic">
+          <div className="text-white text-lg md:text-xl font-light leading-relaxed">
             {activeTab === 'mission' ? (
-              <>
-                "To provide superior quality <span className="text-amber-400 font-normal">energy products</span> and services that partners select for their reliability, and our team is proud to deliver across the ocean."
-              </>
+              <ul className="text-left space-y-4 list-disc pl-5">
+                <li>To provide high-quality <span className="text-amber-400 font-medium">industrial solar fuel (HSD B40)</span> and <span className="text-amber-400 font-medium">Marine Fuel Oil (MFO)</span> to meet the diverse needs of various industrial and shipping sectors.</li>
+                <li>To build a strong and efficient distribution network to reach every strategic region in Indonesia.</li>
+                <li>To maintain the highest operational standards in terms of safety, sustainability, and regulatory compliance.</li>
+                <li>To create long-term value for clients through consistent fuel supply and responsive technical support.</li>
+              </ul>
             ) : (
-              <>
-                "To be the <span className="text-amber-400 font-normal">anchor of trust</span> in the maritime industry, driving innovation and sustainable growth for every port we serve."
-              </>
+              <ul className="text-left space-y-4 list-disc pl-5">
+                <li>To be the premier bunker fuel agent of choice in Indonesia, recognized for our <span className="text-amber-400 font-medium">supply reliability</span>, product quality, and outstanding customer service.</li>
+                <li>To achieve operational excellence in bunker fuel distribution through the adoption of cutting-edge technology and digital transformation, ensuring the highest efficiency, transparency, and customer satisfaction throughout Indonesia.</li>
+              </ul>
             )}
-          </p>
+          </div>
         </div>
 
         {/* Massive Text Layer */}
@@ -55,14 +59,14 @@ const MissionVision: React.FC = () => {
             <h4 className="text-amber-400 font-bold text-lg mb-2">Quality</h4>
             <p className="text-gray-400 text-sm">ISO Certified Bunker Fuel</p>
           </div>
-          <div className="text-center group hover:transform hover:-translate-y-1 transition-transform duration-300">
+          {/* <div className="text-center group hover:transform hover:-translate-y-1 transition-transform duration-300">
             <h4 className="text-amber-400 font-bold text-lg mb-2">Integrity</h4>
             <p className="text-gray-400 text-sm">Transparent Operations</p>
           </div>
           <div className="text-center group hover:transform hover:-translate-y-1 transition-transform duration-300">
             <h4 className="text-amber-400 font-bold text-lg mb-2">Service</h4>
             <p className="text-gray-400 text-sm">24/7 Port Availability</p>
-          </div>
+          </div> */}
         </div>
 
       </div>
