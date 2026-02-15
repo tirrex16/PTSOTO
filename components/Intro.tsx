@@ -8,7 +8,7 @@ const Intro: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-8">
           <h2 className="text-5xl md:text-7xl font-bold text-[#2A335D] leading-tight tracking-tight max-w-3xl">
-            Get to<br />Know Us Better.
+            Get to<br />Know Us Better
           </h2>
           <p className="text-gray-500 max-w-md text-lg leading-relaxed font-medium mb-2">
             Specifically built to supply HSD B40 Solar and Marine Fuel Oil (MFO). With a
@@ -28,7 +28,7 @@ const Intro: React.FC = () => {
               <p className="text-blue-100/90 text-sm leading-relaxed mb-8">
                 Discover our journey, values, and the passion that drives us to create exceptional energy distribution experiences across Indonesia.
               </p>
-              <div className="w-16 h-1 bg-[#00C9A7] rounded-full"></div>
+              {/* <div className="w-16 h-1 bg-[#00C9A7] rounded-full"></div> */}
             </div>
 
             {/* Small Image (Container Ship) */}

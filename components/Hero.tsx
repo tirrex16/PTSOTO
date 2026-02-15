@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-8">
           <h1 className="text-5xl md:text-7xl font-bold text-[#2A335D] leading-tight tracking-tight max-w-3xl">
-            Maritime Energy Solutions.
+            Maritime Energy Solutions
             {/* <span className="block w-24 h-2 bg-[#00C9A7] mt-6 rounded-full"></span> */}
           </h1>
           <p className="text-gray-500 max-w-md text-lg leading-relaxed font-medium mb-2">

@@ -57,16 +57,16 @@ const MissionVision: React.FC = () => {
         <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-12 w-full max-w-5xl px-6 relative z-40">
           <div className="text-center group hover:transform hover:-translate-y-1 transition-transform duration-300">
             <h4 className="text-amber-400 font-bold text-lg mb-2">Quality</h4>
-            <p className="text-gray-400 text-sm">ISO Certified Bunker Fuel</p>
+            <p className="text-gray-400 text-sm">Certified Bunker Fuel</p>
           </div>
-          {/* <div className="text-center group hover:transform hover:-translate-y-1 transition-transform duration-300">
+          <div className="text-center group hover:transform hover:-translate-y-1 transition-transform duration-300">
             <h4 className="text-amber-400 font-bold text-lg mb-2">Integrity</h4>
             <p className="text-gray-400 text-sm">Transparent Operations</p>
           </div>
           <div className="text-center group hover:transform hover:-translate-y-1 transition-transform duration-300">
             <h4 className="text-amber-400 font-bold text-lg mb-2">Service</h4>
             <p className="text-gray-400 text-sm">24/7 Port Availability</p>
-          </div> */}
+          </div>
         </div>
 
       </div>

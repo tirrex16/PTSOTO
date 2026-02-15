@@ -38,7 +38,7 @@ const Products: React.FC = () => {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-8">
           <h2 className="text-5xl md:text-7xl font-bold text-[#2A335D] leading-tight tracking-tight max-w-3xl">
-            Our Products.
+            Our Products
           </h2>
           <p className="text-gray-500 max-w-md text-lg leading-relaxed font-medium mb-2">
             From premium fuel supply to comprehensive maritime logistics, we provide quality energy solutions tailored to your operational needs.
