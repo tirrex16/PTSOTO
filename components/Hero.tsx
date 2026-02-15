@@ -35,25 +35,25 @@ const Hero: React.FC = () => {
 
         {/* Stats Section (Pill Shape) */}
         <div className="mt-12 border border-gray-200 rounded-[2rem] p-8 md:p-12 shadow-sm bg-white">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-0 divide-y lg:divide-y-0 lg:divide-x divide-gray-100">
 
-            <div className="px-4 flex items-center justify-center md:justify-start gap-4">
-              <span className="text-5xl md:text-6xl font-bold text-[#2A335D]">100+</span>
-              <div className="text-gray-500 text-sm font-medium leading-tight">
+            <div className="flex flex-col xl:flex-row items-center justify-center gap-2 xl:gap-5 px-4 py-4 lg:py-0">
+              <span className="text-4xl md:text-5xl font-bold text-[#2A335D]">100+</span>
+              <div className="text-gray-500 text-sm font-medium leading-tight text-center xl:text-left">
                 Areas <br /> Serviced
               </div>
             </div>
 
-            <div className="px-4 flex items-center justify-center md:justify-start gap-4 md:-ml-12">
-              <span className="text-5xl md:text-6xl font-bold text-[#2A335D]">1.000.000+</span>
-              <div className="text-gray-500 text-sm font-medium leading-tight">
+            <div className="flex flex-col xl:flex-row items-center justify-center gap-2 xl:gap-5 px-4 py-4 lg:py-0">
+              <span className="text-4xl md:text-5xl font-bold text-[#2A335D]">1.000.000+</span>
+              <div className="text-gray-500 text-sm font-medium leading-tight text-center xl:text-left">
                 Liters <br /> Supplied
               </div>
             </div>
 
-            <div className="px-4 flex items-center justify-center md:justify-start gap-4">
-              <span className="text-5xl md:text-6xl font-bold text-[#2A335D]">100%</span>
-              <div className="text-gray-500 text-sm font-medium leading-tight">
+            <div className="flex flex-col xl:flex-row items-center justify-center gap-2 xl:gap-5 px-4 py-4 lg:py-0">
+              <span className="text-4xl md:text-5xl font-bold text-[#2A335D]">100%</span>
+              <div className="text-gray-500 text-sm font-medium leading-tight text-center xl:text-left">
                 Satisfaction <br /> Guarantee
               </div>
             </div>
