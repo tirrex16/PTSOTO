@@ -48,8 +48,8 @@ const MissionVision: React.FC = () => {
         {/* Massive Text Layer */}
         <div className="relative w-full flex items-center justify-center mt-8 md:mt-16 z-30 pointer-events-none">
           {/* Background Text Layer */}
-          <h2 className="text-[15vw] md:text-[200px] font-black leading-none text-white opacity-90 tracking-tighter select-none transition-all duration-300">
-            OUR <br className="md:hidden" /> {activeTab.toUpperCase()}
+          <h2 className="text-[12vw] md:text-[200px] font-black leading-none text-white opacity-90 tracking-tighter select-none transition-all duration-300">
+            COMMITMENT
           </h2>
         </div>
 

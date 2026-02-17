@@ -32,15 +32,17 @@ const Products: React.FC = () => {
   ];
 
   return (
-    <section id="products" className="py-24 px-6 md:px-12 overflow-hidden">
+    <section id="products" className="bg-white pt-24 pb-10 md:pt-32 md:pb-16 px-6 md:px-12 overflow-hidden scroll-mt-32">
       <div className="max-w-7xl mx-auto">
 
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-8">
-          <h2 className="text-5xl md:text-7xl font-bold text-[#2A335D] leading-tight tracking-tight max-w-3xl">
-            Our Products
-          </h2>
-          <p className="text-gray-500 max-w-md text-lg leading-relaxed font-medium mb-2">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-8 text-left">
+          <div className="max-w-3xl relative">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#2A335D] leading-tight tracking-tight">
+              Our Products
+            </h2>
+          </div>
+          <p className="text-gray-500 max-w-md text-base md:text-lg leading-relaxed font-medium mb-2 border-l-4 border-[#00C9A7] pl-6 md:border-l-0 md:pl-0">
             From premium fuel supply to comprehensive maritime logistics, we provide quality energy solutions tailored to your operational needs.
           </p>
         </div>
@@ -53,7 +55,7 @@ const Products: React.FC = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-[2rem] overflow-hidden group cursor-pointer snap-center shadow-lg hover:shadow-2xl transition-all duration-500"
+              className="min-w-[300px] md:min-w-[500px] lg:min-w-[600px] h-[400px] md:h-[500px] relative rounded-[2rem] overflow-hidden group cursor-pointer snap-center shadow-lg hover:shadow-2xl transition-all duration-500"
             >
               {/* Background Image */}
               <img

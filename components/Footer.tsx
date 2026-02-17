@@ -26,21 +26,19 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h5 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Products and Services</h5>
+            <h5 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Products</h5>
             <ul className="space-y-4 text-sm text-blue-100/70">
               <li><a href="#" className="hover:text-white transition-colors">High Speed Diesel B40</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Marine Fuel Oil</a></li>
             </ul>
           </div>
-  
+
 
           <div>
-            <h5 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Resources</h5>
+            <h5 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Services</h5>
             <ul className="space-y-4 text-sm text-blue-100/70">
-              <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Case Studies</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">FAQs</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Support</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Port to Ship</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Ship to Ship</a></li>
             </ul>
           </div>
         </div>

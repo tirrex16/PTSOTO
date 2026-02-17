@@ -2,11 +2,11 @@ import React from 'react';
 
 const Intro: React.FC = () => {
   return (
-    <section id="about" className="bg-white py-10 md:py-16 px-6">
+    <section id="about" className="bg-white pt-24 pb-10 md:pt-32 md:pb-16 px-6 scroll-mt-32">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-8">
+        <div className="flex flex-col md:flex-row justify-between md:items-end mb-12 gap-8">
           <h2 className="text-5xl md:text-7xl font-bold text-[#2A335D] leading-tight tracking-tight max-w-3xl">
             Get to<br />Know Us Better
           </h2>
