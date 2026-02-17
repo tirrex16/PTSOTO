@@ -11,7 +11,7 @@ const Intro: React.FC = () => {
             Get to<br />Know Us Better
           </h2>
           <p className="text-gray-500 max-w-md text-lg leading-relaxed font-medium mb-2">
-            Specifically built to supply HSD B40 Solar and Marine Fuel Oil (MFO). With a
+            Specifically built to supply HSD B40 and Marine Fuel Oil (MFO). With a
             strong commitment to quality and customer service, we are ready to support your
             business operations in Indonesia.
           </p>

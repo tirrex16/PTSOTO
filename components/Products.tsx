@@ -5,13 +5,13 @@ const Products: React.FC = () => {
 
   const services = [
     {
-      title: "HSD B40 Solar",
+      title: "High Speed Diesel (HSD B40)",
       category: "Industrial Fuel",
       image: "https://images.unsplash.com/photo-1542281286-9e0a16bb7366?q=80&w=600&auto=format&fit=crop"
     },
     {
-      title: "MFO / Marine Fuel",
-      category: "Bunker Supply",
+      title: "Marine Fuel Oil (MFO)",
+      category: "Industrial Fuel",
       image: "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?q=80&w=600&auto=format&fit=crop"
     },
     // {
