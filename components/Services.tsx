@@ -24,7 +24,7 @@ const Services: React.FC = () => {
 
                 {/* Header */}
                 <div className="mb-20">
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#2A335D] mb-6">Our Services</h2>
+                    <h2 className="text-4xl md:text-5xl font-bold text-[#2A335D] mb-6">Services</h2>
                     <p className="text-gray-500 max-w-2xl mx-auto text-lg leading-relaxed">
                         Tailored Solutions for Your Success, Elevate Your Experience with Our Exceptional and Comprehensive Services Today
                     </p>

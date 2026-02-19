@@ -39,7 +39,7 @@ const Products: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-8 text-left">
           <div className="max-w-3xl relative">
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#2A335D] leading-tight tracking-tight">
-              Our Products
+              Products
             </h2>
           </div>
           <p className="text-gray-500 max-w-md text-base md:text-lg leading-relaxed font-medium mb-2 border-l-4 border-[#00C9A7] pl-6 md:border-l-0 md:pl-0">
