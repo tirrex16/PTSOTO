@@ -1,36 +1,45 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-
 import ContactModal from './ContactModal';
 
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isContactModalOpen, setIsContactModalOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
 
+    // Close menu & scroll to top on route change
     useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 20);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    // Scroll to top on route change
-    useEffect(() => {
-        window.scrollTo(0, 0);
         setIsOpen(false);
-    }, [location]);
+        window.scrollTo({ top: 0 });
+    }, [location.pathname]);
 
-    // Lock body scroll when mobile menu is open
+    // Lock scroll WITHOUT causing layout shift
     useEffect(() => {
         if (isOpen) {
-            document.body.style.overflow = 'hidden';
+            // Save current scroll position & lock
+            const scrollY = window.scrollY;
+            document.documentElement.style.setProperty('--scroll-y', `${scrollY}px`);
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollY}px`;
+            document.body.style.width = '100%';
         } else {
-            document.body.style.overflow = 'unset';
+            // Restore scroll position
+            const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            if (scrollY) window.scrollTo(0, parseInt(scrollY));
         }
     }, [isOpen]);
+
+    const toggleMenu = useCallback(() => setIsOpen(prev => !prev), []);
+    const closeMenu = useCallback(() => setIsOpen(false), []);
+
+    const handleContactClick = useCallback((e: React.MouseEvent) => {
+        e.preventDefault();
+        closeMenu();
+        setIsContactModalOpen(true);
+    }, [closeMenu]);
 
     const navLinks = [
         { name: 'About', path: '/about' },
@@ -39,89 +48,105 @@ const Navbar: React.FC = () => {
         { name: 'Products', path: '/products' },
     ];
 
-    const handleContactClick = (e: React.MouseEvent) => {
-        e.preventDefault();
-        setIsOpen(false); // Close mobile menu if open
-        setIsContactModalOpen(true);
-    };
-
     return (
         <>
-            <nav
-                className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 
-                ${scrolled || location.pathname !== '/'
-                        ? 'py-4 border-b border-gray-200 shadow-sm'
-                        : 'py-6 border-b border-transparent'
-                    } 
-                ${(scrolled || location.pathname !== '/')
-                        ? (isOpen ? 'bg-white' : 'bg-white/80 backdrop-blur-md')
-                        : 'bg-transparent'
-                    }`}
-            >
-                <div className="relative z-[110] max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+            <nav className={`fixed top-0 left-0 right-0 z-[100] transition-colors duration-300 py-4 sm:py-5 ${
+                isOpen ? 'bg-white' : 'bg-white/30 backdrop-blur-md'
+            }`}>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex justify-between items-center">
+
                     {/* Logo */}
-                    <Link to="/" className="z-[110]" onClick={() => setIsOpen(false)}>
-                        <span className="text-2xl font-bold tracking-tight text-[#2A335D]">
-                            SOTO
+                    <Link
+                        to="/"
+                        onClick={closeMenu}
+                        className="flex items-center gap-2.5 sm:gap-3 min-w-0 md:-ml-10"
+                    >
+                        <img
+                            src="/anchor.png"
+                            alt="SOTO Logo"
+                            className="h-8 sm:h-9 md:h-10 w-auto object-contain flex-shrink-0"
+                        />
+                        <span className="text-sm sm:text-base md:text-xl font-bold tracking-tight text-[#2A335D] leading-tight truncate">
+                            SOTO ENERGI SHAKTI
                         </span>
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center space-x-10">
+                    <div className="hidden md:flex items-center space-x-8 lg:space-x-10 flex-shrink-0">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 to={link.path}
-                                className={`text-sm font-medium transition-colors ${location.pathname === link.path ? 'text-[#2A335D] font-bold' : 'text-gray-500 hover:text-[#2A335D]'}`}
+                                className={`text-sm font-medium transition-colors whitespace-nowrap ${
+                                    location.pathname === link.path
+                                        ? 'text-[#2A335D] font-bold'
+                                        : 'text-gray-500 hover:text-[#2A335D]'
+                                }`}
                             >
                                 {link.name}
                             </Link>
                         ))}
                         <button
                             onClick={handleContactClick}
-                            className="px-6 py-2.5 bg-[#2A335D] text-white text-sm font-medium rounded-full hover:bg-[#1f2647] transition-all shadow-md hover:shadow-lg cursor-pointer"
+                            className="px-5 py-2.5 bg-[#2A335D] text-white text-sm font-medium rounded-full hover:bg-[#1f2647] transition-all shadow-md hover:shadow-lg cursor-pointer whitespace-nowrap"
                         >
                             Contact
                         </button>
                     </div>
 
-                    {/* Mobile Menu Toggle */}
+                    {/* Hamburger Button */}
                     <button
-                        onClick={() => setIsOpen(!isOpen)}
-                        className="md:hidden z-[110] p-2 focus:outline-none"
-                        aria-label="Toggle Menu"
+                        onClick={toggleMenu}
+                        className="md:hidden flex-shrink-0 w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus:outline-none"
+                        aria-label={isOpen ? 'Close Menu' : 'Open Menu'}
+                        aria-expanded={isOpen}
                     >
-                        <div className="w-6 flex flex-col items-end space-y-1.5">
-                            <span className={`block h-0.5 transition-all duration-300 ${isOpen ? 'w-6 rotate-45 translate-y-2 bg-[#2A335D]' : 'w-6 bg-[#2A335D]'}`} />
-                            <span className={`block h-0.5 transition-all duration-300 ${isOpen ? 'w-0 opacity-0' : 'w-4 bg-[#2A335D]'}`} />
-                            <span className={`block h-0.5 transition-all duration-300 ${isOpen ? 'w-6 -rotate-45 -translate-y-2 bg-[#2A335D]' : 'w-6 bg-[#2A335D]'}`} />
-                        </div>
+                        <span className={`block w-6 h-0.5 bg-[#2A335D] transition-all duration-200 origin-center ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
+                        <span className={`block w-4 h-0.5 bg-[#2A335D] transition-all duration-200 ${isOpen ? 'opacity-0 scale-x-0' : ''}`} />
+                        <span className={`block w-6 h-0.5 bg-[#2A335D] transition-all duration-200 origin-center ${isOpen ? '-rotate-45 -translate-y-2' : ''}`} />
                     </button>
                 </div>
-
-                {/* Mobile Menu Overlay */}
-                <div
-                    className={`fixed inset-0 bg-white z-[100] md:hidden ${isOpen ? 'block' : 'hidden'}`}
-                >
-                    <div className="flex flex-col justify-center items-center h-full space-y-8 px-8">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                to={link.path}
-                                className={`text-2xl font-medium ${location.pathname === link.path ? 'text-[#2A335D]' : 'text-gray-600'}`}
-                            >
-                                {link.name}
-                            </Link>
-                        ))}
-                        <button
-                            onClick={handleContactClick}
-                            className="px-8 py-3 bg-[#2A335D] text-white text-lg rounded-full"
-                        >
-                            Contact Us
-                        </button>
-                    </div>
-                </div>
             </nav>
+
+            {/* Mobile Menu — rendered outside nav to avoid layout interference */}
+            {/* Backdrop */}
+            <div
+                onClick={closeMenu}
+                className={`fixed inset-0 bg-black/20 z-[98] md:hidden transition-opacity duration-200 ${
+                    isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+                }`}
+                aria-hidden="true"
+            />
+
+            {/* Slide-down Panel */}
+            <div
+                className={`fixed top-0 left-0 right-0 bg-white z-[99] md:hidden shadow-2xl transition-transform duration-300 ease-out ${
+                    isOpen ? 'translate-y-0' : '-translate-y-full'
+                }`}
+            >
+                <div className="px-4 pt-20 pb-10 flex flex-col items-center gap-6">
+                    {navLinks.map((link) => (
+                        <Link
+                            key={link.name}
+                            to={link.path}
+                            onClick={closeMenu}
+                            className={`text-2xl font-medium transition-colors ${
+                                location.pathname === link.path
+                                    ? 'text-[#2A335D] font-bold'
+                                    : 'text-gray-600 hover:text-[#2A335D]'
+                            }`}
+                        >
+                            {link.name}
+                        </Link>
+                    ))}
+                    <button
+                        onClick={handleContactClick}
+                        className="mt-2 px-10 py-3.5 bg-[#2A335D] text-white text-lg font-medium rounded-full hover:bg-[#1f2647] transition-all"
+                    >
+                        Contact Us
+                    </button>
+                </div>
+            </div>
 
             <ContactModal
                 isOpen={isContactModalOpen}

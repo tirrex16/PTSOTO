@@ -2,59 +2,56 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative w-full bg-white pt-32 pb-8 px-6 md:px-12">
+    <section className="relative w-full bg-white pt-28 pb-8 px-4 sm:px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
 
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-8">
-          <h1 className="text-5xl md:text-7xl font-bold text-[#2A335D] leading-tight tracking-tight max-w-3xl">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12 gap-6 md:gap-8">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#2A335D] leading-tight tracking-tight max-w-3xl">
             Maritime Energy Solutions
-            {/* <span className="block w-24 h-2 bg-[#00C9A7] mt-6 rounded-full"></span> */}
           </h1>
-          <p className="text-gray-500 max-w-md text-lg leading-relaxed font-medium mb-2">
+          <p className="text-gray-500 max-w-xs sm:max-w-sm md:max-w-md text-base md:text-lg leading-relaxed font-medium">
             Dedicated to providing reliable and efficient industrial and maritime energy solutions, we have quickly positioned ourselves as a trusted partner in the distribution of
             industrial diesel fuel.
           </p>
         </div>
 
         {/* Main Visual */}
-        <div className="relative w-full h-[500px] md:h-[600px] rounded-[3rem] overflow-hidden shadow-2xl group">
+        <div className="relative w-full h-[280px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl sm:rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl group">
           <img
             src="https://www.itu.int/hub/wp-content/uploads/sites/4/2025/09/BR_WMD-AdobeStock_1601866117.jpg.optimal.jpg"
-            alt="Abstract White Architecture"
+            alt="Maritime Energy Solutions"
             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
           />
 
-
           {/* Overlay Text */}
-          <div className="absolute top-12 left-12 max-w-xs">
-            <h3 className="text-[white] font-bold text-xl mb-2">PT Soto Energi Shakti</h3>
-            {/* <p className="text-gray-500 text-sm">Headshot</p> */}
+          <div className="absolute top-6 left-6 sm:top-10 sm:left-10 md:top-12 md:left-12 max-w-xs">
+            <h3 className="text-white font-bold text-base sm:text-lg md:text-xl">PT Soto Energi Shakti</h3>
           </div>
         </div>
 
-        {/* Stats Section (Pill Shape) */}
-        <div className="mt-12 border border-gray-200 rounded-[2rem] p-8 md:p-12 shadow-sm bg-white">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-0 divide-y lg:divide-y-0 lg:divide-x divide-gray-100">
+        {/* Stats Section */}
+        <div className="mt-8 md:mt-12 border border-gray-200 rounded-2xl sm:rounded-[2rem] py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-12 shadow-sm bg-white">
+          <div className="grid grid-cols-3 divide-x divide-gray-100">
 
-            <div className="flex flex-col xl:flex-row items-center justify-center gap-2 xl:gap-5 px-4 py-4 lg:py-0">
-              <span className="text-4xl md:text-5xl font-bold text-[#2A335D]">100+</span>
-              <div className="text-gray-500 text-sm font-medium leading-tight text-center xl:text-left">
-                Areas <br /> Serviced
+            <div className="flex flex-col items-center justify-center gap-1.5 px-2 sm:px-4 text-center">
+              <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#2A335D] leading-none">100+</span>
+              <div className="text-gray-500 text-xs sm:text-sm font-medium leading-snug">
+                Areas<br />Serviced
               </div>
             </div>
 
-            <div className="flex flex-col xl:flex-row items-center justify-center gap-2 xl:gap-5 px-4 py-4 lg:py-0">
-              <span className="text-4xl md:text-5xl font-bold text-[#2A335D]">1.000.000+</span>
-              <div className="text-gray-500 text-sm font-medium leading-tight text-center xl:text-left">
-                Liters <br /> Supplied
+            <div className="flex flex-col items-center justify-center gap-1.5 px-2 sm:px-4 text-center">
+              <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#2A335D] leading-none">1.000.000+</span>
+              <div className="text-gray-500 text-xs sm:text-sm font-medium leading-snug">
+                Liters<br />Supplied
               </div>
             </div>
 
-            <div className="flex flex-col xl:flex-row items-center justify-center gap-2 xl:gap-5 px-4 py-4 lg:py-0">
-              <span className="text-4xl md:text-5xl font-bold text-[#2A335D]">100%</span>
-              <div className="text-gray-500 text-sm font-medium leading-tight text-center xl:text-left">
-                Satisfaction <br /> Guarantee
+            <div className="flex flex-col items-center justify-center gap-1.5 px-2 sm:px-4 text-center">
+              <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#2A335D] leading-none">100%</span>
+              <div className="text-gray-500 text-xs sm:text-sm font-medium leading-snug">
+                Satisfaction<br />Guarantee
               </div>
             </div>
 
