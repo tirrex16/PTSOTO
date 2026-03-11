@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const images = [
-  { src: '/about-1.jpg', alt: 'About Image 1' },
-  { src: '/about-2.jpg', alt: 'About Image 2' },
-  { src: '/about-3.jpg', alt: 'About Image 3' },
-  { src: '/about-4.jpg', alt: 'About Image 4' },
-  { src: '/about-5.jpg', alt: 'About Image 5' },
+  { src: '/1.jpeg', alt: 'About Image 1' },
+  { src: '/2.jpeg', alt: 'About Image 2' },
+  { src: '/3.jpeg', alt: 'About Image 3' },
+  { src: '/4.jpeg', alt: 'About Image 4' },
+  { src: '/5.jpeg', alt: 'About Image 5' },
 ];
 
 const Intro: React.FC = () => {
