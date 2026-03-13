@@ -50,10 +50,7 @@ const Services: React.FC = () => {
                 {service.description}
               </p>
 
-              {/* Button */}
-              <button className="mt-auto px-6 sm:px-8 py-2.5 sm:py-3 rounded-full border border-gray-200 text-[#2A335D] font-semibold hover:bg-[#2A335D] hover:text-white hover:border-transparent transition-all duration-300 text-sm sm:text-base">
-                View more
-              </button>
+
             </div>
           ))}
         </div>

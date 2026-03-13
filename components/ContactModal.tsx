@@ -7,6 +7,7 @@ interface ContactModalProps {
 
 const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
     const [name, setName] = useState('');
+    const [companyOrigin, setCompanyOrigin] = useState('');
     const [especially, setEspecially] = useState('');
     const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
     const [selectedServices, setSelectedServices] = useState<string[]>([]);
@@ -16,7 +17,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
     if (!isOpen) return null;
 
     const handleSend = () => {
-        let fullMessage = `*New Inquiry*\n\n*Name:* ${name}\n*Purpose:* ${especially}`;
+        let fullMessage = `*New Inquiry*\n\n*Name:* ${name}\n*Company:* ${companyOrigin}\n*Purpose:* ${especially}`;
 
         if (especially === 'Order') {
             if (selectedProducts.length > 0) {
@@ -35,6 +36,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
         onClose();
         // Reset form
         setName('');
+        setCompanyOrigin('');
         setEspecially('');
         setSelectedProducts([]);
         setSelectedServices([]);
@@ -42,7 +44,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
     };
 
     const isFormValid = () => {
-        if (!name || !especially || !description) return false;
+        if (!name || !companyOrigin || !especially || !description) return false;
         if (especially === 'Order') {
             if (selectedProducts.length === 0 && selectedServices.length === 0) return false;
         }
@@ -102,6 +104,18 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                             type="text"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
+                            placeholder="Type here"
+                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all placeholder-gray-400 text-gray-700"
+                        />
+                    </div>
+
+                    {/* Company Origin */}
+                    <div className="space-y-2">
+                        <label className="text-sm font-semibold text-gray-700">Company Name (Asal PT)</label>
+                        <input
+                            type="text"
+                            value={companyOrigin}
+                            onChange={(e) => setCompanyOrigin(e.target.value)}
                             placeholder="Type here"
                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all placeholder-gray-400 text-gray-700"
                         />

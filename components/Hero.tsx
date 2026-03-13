@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
         {/* Main Visual */}
         <div className="relative w-full h-[280px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl sm:rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl group">
           <img
-            src="https://www.itu.int/hub/wp-content/uploads/sites/4/2025/09/BR_WMD-AdobeStock_1601866117.jpg.optimal.jpg"
+            src="/Hero.png"
             alt="Maritime Energy Solutions"
             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
           />

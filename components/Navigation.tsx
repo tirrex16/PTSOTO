@@ -62,12 +62,15 @@ const Navbar: React.FC = () => {
                         className="flex items-center gap-2.5 sm:gap-3 min-w-0 md:-ml-10"
                     >
                         <img
-                            src="/anchor.png"
+                            src="/fix 1.png"
                             alt="SOTO Logo"
                             className="h-8 sm:h-9 md:h-10 w-auto object-contain flex-shrink-0"
                         />
-                        <span className="text-sm sm:text-base md:text-xl font-bold tracking-tight text-[#2A335D] leading-tight truncate">
-                            SOTO ENERGI SHAKTI
+                        <span
+                            className="text-sm sm:text-base md:text-3xl font-bold tracking-tight text-[#2A335D] leading-tight truncate"
+                            style={{ fontFamily: "'Taskor', sans-serif" }}
+                        >
+                            SOTO
                         </span>
                     </Link>
 

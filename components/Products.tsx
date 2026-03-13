@@ -1,18 +1,17 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
 const Products: React.FC = () => {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const products = [
     {
       title: "High Speed Diesel (HSD B40)",
       category: "Industrial Fuel",
-      image: "https://images.unsplash.com/photo-1542281286-9e0a16bb7366?q=80&w=600&auto=format&fit=crop"
+      image: "/HSD.png"
     },
     {
       title: "Marine Fuel Oil (MFO)",
       category: "Industrial Fuel",
-      image: "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?q=80&w=600&auto=format&fit=crop"
+      image: "/MFO.png"
     },
   ];
 
@@ -30,18 +29,12 @@ const Products: React.FC = () => {
           </p>
         </div>
 
-        {/* Products Horizontal Scroll */}
-        <div
-          ref={scrollContainerRef}
-          className="flex gap-4 sm:gap-6 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory"
-        >
+        {/* Products Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 pb-4 max-w-sm sm:max-w-3xl mx-auto w-full">
           {products.map((product, index) => (
             <div
               key={index}
-              className="flex-shrink-0 snap-center
-                         w-[80vw] sm:w-[60vw] md:w-[500px] lg:w-[600px] xl:w-[680px]
-                         h-[300px] sm:h-[380px] md:h-[460px] lg:h-[500px]
-                         relative rounded-2xl sm:rounded-[2rem] overflow-hidden group cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500"
+              className="aspect-square w-full relative rounded-2xl sm:rounded-[2rem] overflow-hidden group cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500"
             >
               {/* Background Image */}
               <img
@@ -54,16 +47,16 @@ const Products: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
 
               {/* Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 flex flex-col justify-end h-full">
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 flex flex-col justify-end h-full">
                 {/* Top Right Icon */}
-                <div className="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/30 group-hover:bg-white group-hover:text-black transition-all duration-300">
-                  <i className="fa-solid fa-arrow-up-right transform group-hover:rotate-45 transition-transform duration-300 text-sm sm:text-base"></i>
+                <div className="absolute top-3 right-3 sm:top-5 sm:right-5 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/30 group-hover:bg-white group-hover:text-black transition-all duration-300">
+                  <i className="fa-solid fa-arrow-up-right transform group-hover:rotate-45 transition-transform duration-300 text-xs sm:text-sm"></i>
                 </div>
 
-                <p className="text-gray-300 text-xs sm:text-sm font-medium mb-1 sm:mb-2 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">
+                <p className="text-gray-300 text-[10px] sm:text-xs font-medium mb-1 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">
                   {product.category}
                 </p>
-                <h3 className="text-xl sm:text-2xl font-normal text-white leading-tight">
+                <h3 className="text-sm sm:text-lg md:text-xl font-semibold text-white leading-tight">
                   {product.title}
                 </h3>
               </div>
