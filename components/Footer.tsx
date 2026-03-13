@@ -10,11 +10,19 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 sm:gap-10 md:gap-12 mb-12 md:mb-16">
 
           {/* Brand */}
-          <div className="col-span-2 md:col-span-2 flex flex-row gap-4 items-start">
+          <div className="col-span-2 md:col-span-2 flex flex-row gap-8 sm:gap-12 items-start">
             {/* Left: logo + info */}
             <div className="flex flex-col min-w-0">
-              <img src="/anchorwhite.png" alt="SOTO Logo" className="h-10 sm:h-12 w-auto object-contain object-left mb-4" />
-              <div className="text-blue-200/80 text-xs sm:text-sm leading-relaxed space-y-2">
+              <div className="flex items-center gap-3 mb-4">
+                <img src="/fix 1 putih.png" alt="SOTO Logo" className="h-8 sm:h-10 w-auto object-contain object-left" />
+                <span
+                  className="text-2xl sm:text-3xl font-bold tracking-tight text-white leading-tight"
+                  style={{ fontFamily: "'Taskor', sans-serif" }}
+                >
+                  SOTO
+                </span>
+              </div>
+              <div className="text-blue-200/80 text-xs sm:text-sm leading-relaxed space-y-2 whitespace-nowrap">
                 <p>(+62) 822-7666-6969</p>
                 <p>info@sotoenergi.co.id</p>
               </div>

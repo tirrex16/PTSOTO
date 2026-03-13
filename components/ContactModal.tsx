@@ -111,7 +111,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
 
                     {/* Company Origin */}
                     <div className="space-y-2">
-                        <label className="text-sm font-semibold text-gray-700">Company Name (Asal PT)</label>
+                        <label className="text-sm font-semibold text-gray-700">Company Name</label>
                         <input
                             type="text"
                             value={companyOrigin}
