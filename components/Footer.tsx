@@ -22,9 +22,10 @@ const Footer: React.FC = () => {
                   SOTO
                 </span>
               </div>
-              <div className="text-blue-200/80 text-xs sm:text-sm leading-relaxed space-y-2 whitespace-nowrap">
+              <div className="text-blue-200/80 text-xs sm:text-sm leading-relaxed space-y-2">
+                <p>INFINITI OFFICE, Jl. Permata Regency, Srengseng, Kembangan, Jakarta Barat, DKI Jakarta, Indonesia</p>
+                <p>info@sotoenergi.com</p>
                 <p>(+62) 822-7666-6969</p>
-                <p>info@sotoenergi.co.id</p>
               </div>
             </div>
             {/* Right: Google Maps */}
@@ -48,8 +49,8 @@ const Footer: React.FC = () => {
             <ul className="space-y-3 sm:space-y-4 text-xs sm:text-sm text-blue-100/70">
               <li><Link to="/about" className="hover:text-white transition-colors">About</Link></li>
               <li><Link to="/mission" className="hover:text-white transition-colors">Mission</Link></li>
-              <li><Link to="/products" className="hover:text-white transition-colors">Products</Link></li>
               <li><Link to="/services" className="hover:text-white transition-colors">Services</Link></li>
+              <li><Link to="/products" className="hover:text-white transition-colors">Products</Link></li>
             </ul>
           </div>
 
@@ -79,8 +80,9 @@ const Footer: React.FC = () => {
           </p>
           <div className="flex space-x-5 sm:space-x-6 text-white text-base sm:text-lg">
             <a href="#" className="hover:text-[#00C9A7] transition-colors"><i className="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" className="hover:text-[#00C9A7] transition-colors"><i className="fa-brands fa-instagram"></i></a>
-            <a href="#" className="hover:text-[#00C9A7] transition-colors"><i className="fa-brands fa-twitter"></i></a>
+            {/* Letakan link Instagram Anda pada atribut href di bawah ini mnggantikan "#" */}
+            <a href="https://www.instagram.com/sotoenergi?igsh=eWExdGY1dGFxeXBi" target="_blank" rel="noopener noreferrer" className="hover:text-[#00C9A7] transition-colors"><i className="fa-brands fa-instagram"></i></a>
+            {/* <a href="#" className="hover:text-[#00C9A7] transition-colors"><i className="fa-brands fa-twitter"></i></a> */}
           </div>
         </div>
 

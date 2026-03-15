@@ -6,7 +6,7 @@ const images = [
   { src: '/3.jpeg', alt: 'About Image 3' },
   { src: '/4.jpeg', alt: 'About Image 4' },
   { src: '/5.jpeg', alt: 'About Image 5' },
-  { src: '/5.jpeg', alt: '6 Not yet' },
+  { src: '/6.jpeg', alt: '6 Not yet' },
 ];
 
 const Intro: React.FC = () => {
