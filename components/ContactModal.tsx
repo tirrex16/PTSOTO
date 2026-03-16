@@ -9,10 +9,11 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
     const [name, setName] = useState('');
     const [companyOrigin, setCompanyOrigin] = useState('');
     const [especially, setEspecially] = useState('');
+    const [supplyArea, setSupplyArea] = useState('');
     const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
     const [selectedServices, setSelectedServices] = useState<string[]>([]);
     const [description, setDescription] = useState('');
-    const phoneNumber = '6281291720715';
+    const phoneNumber = '6282276666969';
 
     if (!isOpen) return null;
 
@@ -20,6 +21,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
         let fullMessage = `*New Inquiry*\n\n*Name:* ${name}\n*Company:* ${companyOrigin}\n*Purpose:* ${especially}`;
 
         if (especially === 'Order') {
+            fullMessage += `\n*Supply Area:* ${supplyArea}`;
             if (selectedProducts.length > 0) {
                 fullMessage += `\n*Products:* ${selectedProducts.join(', ')}`;
             }
@@ -37,6 +39,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
         // Reset form
         setName('');
         setCompanyOrigin('');
+        setSupplyArea('');
         setEspecially('');
         setSelectedProducts([]);
         setSelectedServices([]);
@@ -46,6 +49,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
     const isFormValid = () => {
         if (!name || !companyOrigin || !especially || !description) return false;
         if (especially === 'Order') {
+            if (!supplyArea) return false;
             if (selectedProducts.length === 0 && selectedServices.length === 0) return false;
         }
         return true;
@@ -120,6 +124,8 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all placeholder-gray-400 text-gray-700"
                         />
                     </div>
+
+
 
                     {/* Especially Dropdown */}
                     <div className="space-y-2">
@@ -208,6 +214,18 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                                         </label>
                                     ))}
                                 </div>
+                            </div>
+
+                            {/* Supply Area */}
+                            <div className="space-y-2 pt-2">
+                                <label className="text-sm font-semibold text-gray-700 block">Supply Area</label>
+                                <input
+                                    type="text"
+                                    value={supplyArea}
+                                    onChange={(e) => setSupplyArea(e.target.value)}
+                                    placeholder="Type here"
+                                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all placeholder-gray-400 text-gray-700 bg-white"
+                                />
                             </div>
                         </div>
                     )}
