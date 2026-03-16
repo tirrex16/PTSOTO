@@ -59,8 +59,8 @@ const MissionVision: React.FC = () => {
         <div className="mt-12 md:mt-20 grid grid-cols-3 gap-6 sm:gap-10 md:gap-12 w-full max-w-xs sm:max-w-lg md:max-w-3xl relative z-40">
           {[
             { label: 'Quality', sub: 'Certified Bunker Fuel' },
-            { label: 'Integrity', sub: 'Transparent Operations' },
-            { label: 'Service', sub: '24/7 Port Availability' },
+            { label: 'Integrity', sub: 'Transparent Operation' },
+            { label: 'Service', sub: '24/7 Availability' },
           ].map((item) => (
             <div key={item.label} className="text-center group hover:-translate-y-1 transition-transform duration-300">
               <h4 className="text-amber-400 font-bold text-sm sm:text-base md:text-lg mb-1 sm:mb-2">{item.label}</h4>

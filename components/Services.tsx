@@ -51,7 +51,7 @@ const Services: React.FC = () => {
                 <img 
                   src={service.image} 
                   alt={service.title} 
-                  className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${service.imagePosition || ''}`}
+                  className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 blur-[2px] scale-105 group-hover:scale-[1.15] ${service.imagePosition || ''}`}
                 />
 
                 {/* Top Right Icon */}
