@@ -34,7 +34,7 @@ const MissionVision: React.FC = () => {
           <div className="text-white text-sm sm:text-base md:text-lg font-light leading-relaxed text-left">
             {activeTab === 'mission' ? (
               <ul className="space-y-3 sm:space-y-4 list-disc pl-4 sm:pl-5">
-                <li>To provide high-quality <span className="text-amber-400 font-medium">Industrial Solar Fuel (HSD B40)</span> and <span className="text-amber-400 font-medium">Marine Fuel Oil (MFO)</span> to meet the diverse needs of various industrial and shipping sectors.</li>
+                <li>To provide high-quality <span className="text-amber-400 font-medium">Industrial Fuel (HSD B40)</span> and <span className="text-amber-400 font-medium">Marine Fuel Oil (MFO)</span> to meet the diverse needs of various industrial and shipping sectors.</li>
                 <li>To build a strong and efficient distribution network to reach every strategic region in Indonesia.</li>
                 <li>To maintain the highest operational standards in terms of safety, sustainability, and regulatory compliance.</li>
                 <li>To create long-term value for clients through consistent fuel supply and responsive technical support.</li>
